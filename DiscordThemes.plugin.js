@@ -1,9 +1,9 @@
 /**
  * @name DiscordThemes
- * @version 1.4.0
+ * @version 1.§.0
  * @author ashley.everly (Credits to EricPanDev)
  * @description Nitro-inspired gradient background themes for Discord. Pick any theme from the settings panel.
- * @source https://github.com/ashleyeverly/DiscordThemes
+ * @source https://github.com/ashleyeverly/BetterDiscordNitroThemes
  * @authorLink https://github.com/ashleyeverly
  */
 
@@ -1009,11 +1009,10 @@ const CSS_ID = "FreeDiscordThemesPlugin";
 module.exports = class FreeDiscordThemes {
     constructor() {
         this._activeTheme = null;
-        this._classOps = []; // [{remove, restore}] — class changes to undo on cleanup
+        this._classOps = [];
     }
 
     start() {
-        // Use modern BdApi.Data.load
         const saved = BdApi.Data.load(PLUGIN_NAME, "theme");
         if (saved && THEMES[saved]) {
             this._applyTheme(saved);
@@ -1024,10 +1023,8 @@ module.exports = class FreeDiscordThemes {
         this._removeTheme();
     }
 
-    // ─── Core theme logic ──────────────────────────────────────────────────────
 
     _applyTheme(name) {
-        // Always fully clean up the previous theme first
         this._removeTheme();
 
         const theme = THEMES[name];
@@ -1042,7 +1039,7 @@ module.exports = class FreeDiscordThemes {
 
         if (!body.classList.contains(needed)) {
             if (body.classList.contains(opposite)) {
-                // Swap dark ↔ light
+                // Swap dark light
                 body.classList.remove(opposite);
                 body.classList.add(needed);
                 this._classOps.push({ remove: needed, restore: opposite });
@@ -1052,13 +1049,11 @@ module.exports = class FreeDiscordThemes {
             }
         }
 
-        // Add the custom-theme-background marker class
         if (!body.classList.contains("custom-theme-background")) {
             body.classList.add("custom-theme-background");
             this._classOps.push({ remove: "custom-theme-background", restore: null });
         }
 
-        // Inject CSS using the current BdApi.DOM API
         BdApi.DOM.addStyle(CSS_ID, theme.css);
         this._activeTheme = name;
     }
@@ -1067,7 +1062,6 @@ module.exports = class FreeDiscordThemes {
         // Remove injected CSS
         BdApi.DOM.removeStyle(CSS_ID);
 
-        // Undo body class changes in reverse order (LIFO)
         const body = document.body;
         for (const op of [...this._classOps].reverse()) {
             body.classList.remove(op.remove);
@@ -1078,7 +1072,6 @@ module.exports = class FreeDiscordThemes {
         this._activeTheme = null;
     }
 
-    // ─── Settings panel ────────────────────────────────────────────────────────
 
     getSettingsPanel() {
         const panel = document.createElement("div");
