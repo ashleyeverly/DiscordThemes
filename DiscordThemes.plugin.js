@@ -1,9 +1,9 @@
 /**
  * @name DiscordThemes
- * @version 1.§.0
+ * @version 1.4.0
  * @author ashley.everly (Credits to EricPanDev)
  * @description Nitro-inspired gradient background themes for Discord. Pick any theme from the settings panel.
- * @source https://github.com/ashleyeverly/BetterDiscordNitroThemes
+ * @source https://github.com/ashleyeverly/DiscordThemes
  * @authorLink https://github.com/ashleyeverly
  */
 
