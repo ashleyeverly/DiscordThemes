@@ -1,6 +1,6 @@
 /**
  * @name DiscordThemes
- * @version 1.§.0
+ * @version 1.2.0
  * @author ashley.everly (Credits to EricPanDev)
  * @description Nitro-inspired gradient background themes for Discord. Pick any theme from the settings panel.
  * @source https://github.com/ashleyeverly/BetterDiscordNitroThemes
@@ -8,7 +8,9 @@
  */
 
 const THEMES = {
-    'Aurora': { base: "dark", css: `.theme-dark.custom-theme-background {
+  Aurora: {
+    base: "dark",
+    css: `.theme-dark.custom-theme-background {
     --bg-overlay-color: 0 0 0;
     --bg-overlay-color-inverse: 255 255 255;
     --bg-overlay-opacity-1: 0.85;
@@ -60,8 +62,69 @@ const THEMES = {
     --bg-overlay-home: linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
     --bg-overlay-home-card: linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home-card)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home-card))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
     --bg-overlay-app-frame: linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-app-frame)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-app-frame))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
-}` },
-    'Candyfloss': { base: "light", css: `.theme-light.custom-theme-background {
+}`,
+  },
+  BlurpleTwilight: {
+    base: "dark",
+    css: `'
+.theme-dark.custom-theme-background {
+    --bg-overlay-color: 0 0 0;
+    --bg-overlay-color-inverse: 255 255 255;
+    --bg-overlay-opacity-1: 0.85;
+    --bg-overlay-opacity-2: 0.8;
+    --bg-overlay-opacity-3: 0.7;
+    --bg-overlay-opacity-4: 0.5;
+    --bg-overlay-opacity-5: 0.4;
+    --bg-overlay-opacity-6: 0.1;
+    --bg-overlay-opacity-hover: 0.5;
+    --bg-overlay-opacity-hover-inverse: 0.08;
+    --bg-overlay-opacity-active: 0.45;
+    --bg-overlay-opacity-active-inverse: 0.1;
+    --bg-overlay-opacity-selected: 0.4;
+    --bg-overlay-opacity-selected-inverse: 0.15;
+    --bg-overlay-opacity-chat: 0.8;
+    --bg-overlay-opacity-home: 0.85;
+    --bg-overlay-opacity-home-card: 0.8;
+    --bg-overlay-opacity-app-frame: var(--bg-overlay-opacity-4);
+}
+.theme-dark.custom-theme-background {
+    --__spoiler-background-color--hidden: var(--primary-630);
+    --__spoiler-background-color--hidden--hover: hsl(var(--primary-630-hsl)/0.8);
+}
+.theme-dark, .theme-dark.custom-theme-background {
+    --__spoiler-background-color--hidden: var(--primary-700);
+    --__spoiler-background-color--hidden--hover: hsl(var(--primary-700-hsl)/0.8);
+    --__spoiler-background-color--revealed: hsl(var(--white-500-hsl)/0.1);
+    --__spoiler-text-color--hidden: transparent;
+    --__spoiler-warning-text-color: var(--primary-200);
+    --__spoiler-warning-text-color--hover: var(--white-500);
+    --__spoiler-warning-background-color: hsl(var(--black-500-hsl)/0.6);
+    --__spoiler-warning-background-color--hover: hsl(var(--black-500-hsl)/0.9);
+    --__spoiler-container-box-shadow-color: hsl(var(--black-500-hsl)/0.1);
+}
+
+.custom-theme-background {
+    --custom-theme-background: linear-gradient(47.61deg, var(--bg-gradient-blurple-twilight-1) 11.18%, var(--bg-gradient-blurple-twilight-2) 64.54%);
+}
+.custom-theme-background {
+    --bg-overlay-1: linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-1)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-1))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
+    --bg-overlay-2: linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-2)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-2))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
+    --bg-overlay-3: linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-3)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-3))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
+    --bg-overlay-4: linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-4)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-4))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
+    --bg-overlay-5: linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-5)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-5))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
+    --bg-overlay-6: linear-gradient(rgb(var(--bg-overlay-color-inverse)/var(--bg-overlay-opacity-6)),rgb(var(--bg-overlay-color-inverse)/var(--bg-overlay-opacity-6))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
+    --bg-overlay-hover: linear-gradient(rgb(var(--bg-overlay-color-inverse)/var(--bg-overlay-opacity-hover-inverse)),rgb(var(--bg-overlay-color-inverse)/var(--bg-overlay-opacity-hover-inverse))) fixed 0 0/cover,linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-hover)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-hover))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
+    --bg-overlay-active: linear-gradient(rgb(var(--bg-overlay-color-inverse)/var(--bg-overlay-opacity-active-inverse)),rgb(var(--bg-overlay-color-inverse)/var(--bg-overlay-opacity-active-inverse))) fixed 0 0/cover,linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-active)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-active))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
+    --bg-overlay-selected: linear-gradient(rgb(var(--bg-overlay-color-inverse)/var(--bg-overlay-opacity-selected-inverse)),rgb(var(--bg-overlay-color-inverse)/var(--bg-overlay-opacity-selected-inverse))) fixed 0 0/cover,linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-selected)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-selected))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
+    --bg-overlay-chat: linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-chat)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-chat))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
+    --bg-overlay-home: linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
+    --bg-overlay-home-card: linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home-card)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home-card))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
+    --bg-overlay-app-frame: linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-app-frame)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-app-frame))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
+}`,
+  },
+  Candyfloss: {
+    base: "light",
+    css: `.theme-light.custom-theme-background {
     --bg-overlay-color: 255 255 255;
     --bg-overlay-color-inverse: 0 0 0;
     --bg-overlay-opacity-1: 0.9;
@@ -98,8 +161,11 @@ const THEMES = {
     --bg-overlay-home: linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
     --bg-overlay-home-card: linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home-card)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home-card))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
     --bg-overlay-app-frame: linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-app-frame)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-app-frame))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
-}` },
-    'Chroma Glow': { base: "dark", css: `.theme-dark.custom-theme-background {
+}`,
+  },
+  "Chroma Glow": {
+    base: "dark",
+    css: `.theme-dark.custom-theme-background {
     --bg-overlay-color: 0 0 0;
     --bg-overlay-color-inverse: 255 255 255;
     --bg-overlay-opacity-1: 0.85;
@@ -151,8 +217,11 @@ const THEMES = {
     --bg-overlay-home: linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
     --bg-overlay-home-card: linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home-card)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home-card))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
     --bg-overlay-app-frame: linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-app-frame)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-app-frame))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
-}` },
-    'Citrus Sherbert': { base: "light", css: `.theme-light.custom-theme-background {
+}`,
+  },
+  "Citrus Sherbert": {
+    base: "light",
+    css: `.theme-light.custom-theme-background {
     --bg-overlay-color: 255 255 255;
     --bg-overlay-color-inverse: 0 0 0;
     --bg-overlay-opacity-1: 0.9;
@@ -189,8 +258,11 @@ const THEMES = {
     --bg-overlay-home: linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
     --bg-overlay-home-card: linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home-card)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home-card))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
     --bg-overlay-app-frame: linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-app-frame)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-app-frame))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
-}` },
-    'Crimson Moon': { base: "dark", css: `.theme-dark.custom-theme-background {
+}`,
+  },
+  "Crimson Moon": {
+    base: "dark",
+    css: `.theme-dark.custom-theme-background {
     --bg-overlay-color: 0 0 0;
     --bg-overlay-color-inverse: 255 255 255;
     --bg-overlay-opacity-1: 0.85;
@@ -242,8 +314,11 @@ const THEMES = {
     --bg-overlay-home: linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
     --bg-overlay-home-card: linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home-card)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home-card))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
     --bg-overlay-app-frame: linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-app-frame)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-app-frame))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
-}` },
-    'Desert Khaki': { base: "light", css: `.theme-light.custom-theme-background {
+}`,
+  },
+  "Desert Khaki": {
+    base: "light",
+    css: `.theme-light.custom-theme-background {
     --bg-overlay-color: 255 255 255;
     --bg-overlay-color-inverse: 0 0 0;
     --bg-overlay-opacity-1: 0.9;
@@ -280,8 +355,11 @@ const THEMES = {
     --bg-overlay-home: linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
     --bg-overlay-home-card: linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home-card)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home-card))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
     --bg-overlay-app-frame: linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-app-frame)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-app-frame))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
-}` },
-    'Dusk': { base: "dark", css: `.theme-dark.custom-theme-background {
+}`,
+  },
+  Dusk: {
+    base: "dark",
+    css: `.theme-dark.custom-theme-background {
     --bg-overlay-color: 0 0 0;
     --bg-overlay-color-inverse: 255 255 255;
     --bg-overlay-opacity-1: 0.85;
@@ -333,8 +411,11 @@ const THEMES = {
     --bg-overlay-home: linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
     --bg-overlay-home-card: linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home-card)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home-card))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
     --bg-overlay-app-frame: linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-app-frame)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-app-frame))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
-}` },
-    'Forest': { base: "dark", css: `.theme-dark.custom-theme-background {
+}`,
+  },
+  Forest: {
+    base: "dark",
+    css: `.theme-dark.custom-theme-background {
     --bg-overlay-color: 0 0 0;
     --bg-overlay-color-inverse: 255 255 255;
     --bg-overlay-opacity-1: 0.85;
@@ -386,8 +467,11 @@ const THEMES = {
     --bg-overlay-home: linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
     --bg-overlay-home-card: linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home-card)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home-card))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
     --bg-overlay-app-frame: linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-app-frame)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-app-frame))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
-}` },
-    'Hanami': { base: "light", css: `.theme-light.custom-theme-background {
+}`,
+  },
+  Hanami: {
+    base: "light",
+    css: `.theme-light.custom-theme-background {
     --bg-overlay-color: 255 255 255;
     --bg-overlay-color-inverse: 0 0 0;
     --bg-overlay-opacity-1: 0.9;
@@ -424,8 +508,11 @@ const THEMES = {
     --bg-overlay-home: linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
     --bg-overlay-home-card: linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home-card)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home-card))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
     --bg-overlay-app-frame: linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-app-frame)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-app-frame))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
-}` },
-    'LoFi Vibes': { base: "light", css: `.theme-light.custom-theme-background {
+}`,
+  },
+  "LoFi Vibes": {
+    base: "light",
+    css: `.theme-light.custom-theme-background {
     --bg-overlay-color: 255 255 255;
     --bg-overlay-color-inverse: 0 0 0;
     --bg-overlay-opacity-1: 0.9;
@@ -462,8 +549,11 @@ const THEMES = {
     --bg-overlay-home: linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
     --bg-overlay-home-card: linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home-card)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home-card))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
     --bg-overlay-app-frame: linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-app-frame)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-app-frame))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
-}` },
-    'Mars': { base: "dark", css: `.theme-dark.custom-theme-background {
+}`,
+  },
+  Mars: {
+    base: "dark",
+    css: `.theme-dark.custom-theme-background {
     --bg-overlay-color: 0 0 0;
     --bg-overlay-color-inverse: 255 255 255;
     --bg-overlay-opacity-1: 0.85;
@@ -515,8 +605,11 @@ const THEMES = {
     --bg-overlay-home: linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
     --bg-overlay-home-card: linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home-card)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home-card))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
     --bg-overlay-app-frame: linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-app-frame)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-app-frame))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
-}` },
-    'Midnight Blurple': { base: "dark", css: `.theme-dark.custom-theme-background {
+}`,
+  },
+  "Midnight Blurple": {
+    base: "dark",
+    css: `.theme-dark.custom-theme-background {
     --bg-overlay-color: 0 0 0;
     --bg-overlay-color-inverse: 255 255 255;
     --bg-overlay-opacity-1: 0.85;
@@ -568,8 +661,11 @@ const THEMES = {
     --bg-overlay-home: linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
     --bg-overlay-home-card: linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home-card)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home-card))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
     --bg-overlay-app-frame: linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-app-frame)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-app-frame))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
-}` },
-    'Mint Apple': { base: "light", css: `.theme-light.custom-theme-background {
+}`,
+  },
+  "Mint Apple": {
+    base: "light",
+    css: `.theme-light.custom-theme-background {
     --bg-overlay-color: 255 255 255;
     --bg-overlay-color-inverse: 0 0 0;
     --bg-overlay-opacity-1: 0.9;
@@ -606,8 +702,11 @@ const THEMES = {
     --bg-overlay-home: linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
     --bg-overlay-home-card: linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home-card)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home-card))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
     --bg-overlay-app-frame: linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-app-frame)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-app-frame))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
-}` },
-    'Neon Nights': { base: "dark", css: `.theme-dark.custom-theme-background {
+}`,
+  },
+  "Neon Nights": {
+    base: "dark",
+    css: `.theme-dark.custom-theme-background {
     --bg-overlay-color: 0 0 0;
     --bg-overlay-color-inverse: 255 255 255;
     --bg-overlay-opacity-1: 0.85;
@@ -659,8 +758,11 @@ const THEMES = {
     --bg-overlay-home: linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
     --bg-overlay-home-card: linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home-card)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home-card))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
     --bg-overlay-app-frame: linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-app-frame)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-app-frame))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
-}` },
-    'Retro Raincloud': { base: "light", css: `.theme-light.custom-theme-background {
+}`,
+  },
+  "Retro Raincloud": {
+    base: "light",
+    css: `.theme-light.custom-theme-background {
     --bg-overlay-color: 255 255 255;
     --bg-overlay-color-inverse: 0 0 0;
     --bg-overlay-opacity-1: 0.9;
@@ -697,8 +799,11 @@ const THEMES = {
     --bg-overlay-home: linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
     --bg-overlay-home-card: linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home-card)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home-card))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
     --bg-overlay-app-frame: linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-app-frame)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-app-frame))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
-}` },
-    'Retro Storm': { base: "dark", css: `.theme-dark.custom-theme-background {
+}`,
+  },
+  "Retro Storm": {
+    base: "dark",
+    css: `.theme-dark.custom-theme-background {
     --bg-overlay-color: 0 0 0;
     --bg-overlay-color-inverse: 255 255 255;
     --bg-overlay-opacity-1: 0.85;
@@ -750,8 +855,11 @@ const THEMES = {
     --bg-overlay-home: linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
     --bg-overlay-home-card: linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home-card)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home-card))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
     --bg-overlay-app-frame: linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-app-frame)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-app-frame))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
-}` },
-    'Sepia': { base: "dark", css: `.theme-dark.custom-theme-background {
+}`,
+  },
+  Sepia: {
+    base: "dark",
+    css: `.theme-dark.custom-theme-background {
     --bg-overlay-color: 0 0 0;
     --bg-overlay-color-inverse: 255 255 255;
     --bg-overlay-opacity-1: 0.85;
@@ -803,8 +911,11 @@ const THEMES = {
     --bg-overlay-home: linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
     --bg-overlay-home-card: linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home-card)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home-card))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
     --bg-overlay-app-frame: linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-app-frame)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-app-frame))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
-}` },
-    'Strawberry Lemonade': { base: "dark", css: `.theme-dark.custom-theme-background {
+}`,
+  },
+  "Strawberry Lemonade": {
+    base: "dark",
+    css: `.theme-dark.custom-theme-background {
     --bg-overlay-color: 0 0 0;
     --bg-overlay-color-inverse: 255 255 255;
     --bg-overlay-opacity-1: 0.85;
@@ -856,8 +967,11 @@ const THEMES = {
     --bg-overlay-home: linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
     --bg-overlay-home-card: linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home-card)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home-card))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
     --bg-overlay-app-frame: linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-app-frame)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-app-frame))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
-}` },
-    'Sunrise': { base: "light", css: `.theme-light.custom-theme-background {
+}`,
+  },
+  Sunrise: {
+    base: "light",
+    css: `.theme-light.custom-theme-background {
     --bg-overlay-color: 255 255 255;
     --bg-overlay-color-inverse: 0 0 0;
     --bg-overlay-opacity-1: 0.9;
@@ -894,8 +1008,11 @@ const THEMES = {
     --bg-overlay-home: linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
     --bg-overlay-home-card: linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home-card)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home-card))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
     --bg-overlay-app-frame: linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-app-frame)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-app-frame))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
-}` },
-    'Sunset': { base: "dark", css: `.theme-dark.custom-theme-background {
+}`,
+  },
+  Sunset: {
+    base: "dark",
+    css: `.theme-dark.custom-theme-background {
     --bg-overlay-color: 0 0 0;
     --bg-overlay-color-inverse: 255 255 255;
     --bg-overlay-opacity-1: 0.85;
@@ -947,8 +1064,11 @@ const THEMES = {
     --bg-overlay-home: linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
     --bg-overlay-home-card: linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home-card)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home-card))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
     --bg-overlay-app-frame: linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-app-frame)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-app-frame))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
-}` },
-    'Under the Sea': { base: "dark", css: `.theme-dark.custom-theme-background {
+}`,
+  },
+  "Under the Sea": {
+    base: "dark",
+    css: `.theme-dark.custom-theme-background {
     --bg-overlay-color: 0 0 0;
     --bg-overlay-color-inverse: 255 255 255;
     --bg-overlay-opacity-1: 0.85;
@@ -1000,146 +1120,105 @@ const THEMES = {
     --bg-overlay-home: linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
     --bg-overlay-home-card: linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home-card)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home-card))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
     --bg-overlay-app-frame: linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-app-frame)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-app-frame))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
-}` }
+}`,
+  },
 };
 
 const PLUGIN_NAME = "FreeDiscordThemes";
 const CSS_ID = "FreeDiscordThemesPlugin";
 
 module.exports = class FreeDiscordThemes {
-    constructor() {
-        this._activeTheme = null;
-        this._classOps = [];
+  constructor() {
+    this._activeTheme = null;
+    this._classOps = [];
+  }
+
+  start() {
+    const saved = BdApi.Data.load(PLUGIN_NAME, "theme");
+    if (saved && THEMES[saved]) {
+      this._applyTheme(saved);
+    }
+  }
+
+  stop() {
+    this._removeTheme();
+  }
+
+  _applyTheme(name) {
+    this._removeTheme();
+
+    const theme = THEMES[name];
+    if (!theme) return;
+
+    const body = document.body;
+    this._classOps = [];
+
+    // Ensure the correct light/dark base class is present
+    const needed = `theme-${theme.base}`;
+    const opposite = theme.base === "dark" ? "theme-light" : "theme-dark";
+
+    if (!body.classList.contains(needed)) {
+      if (body.classList.contains(opposite)) {
+        // Swap dark light
+        body.classList.remove(opposite);
+        body.classList.add(needed);
+        this._classOps.push({ remove: needed, restore: opposite });
+      } else {
+        body.classList.add(needed);
+        this._classOps.push({ remove: needed, restore: null });
+      }
     }
 
-    start() {
-        const saved = BdApi.Data.load(PLUGIN_NAME, "theme");
-        if (saved && THEMES[saved]) {
-            this._applyTheme(saved);
-        }
+    if (!body.classList.contains("custom-theme-background")) {
+      body.classList.add("custom-theme-background");
+      this._classOps.push({ remove: "custom-theme-background", restore: null });
     }
 
-    stop() {
-        this._removeTheme();
+    BdApi.DOM.addStyle(CSS_ID, theme.css);
+    this._activeTheme = name;
+  }
+
+  _removeTheme() {
+    // Remove injected CSS
+    BdApi.DOM.removeStyle(CSS_ID);
+
+    const body = document.body;
+    for (const op of [...this._classOps].reverse()) {
+      body.classList.remove(op.remove);
+      if (op.restore) body.classList.add(op.restore);
     }
 
+    this._classOps = [];
+    this._activeTheme = null;
+  }
 
-    _applyTheme(name) {
-        this._removeTheme();
+  getSettingsPanel() {
+    const panel = document.createElement("div");
+    panel.style.cssText =
+      ";display:flex;gap:20pxcolor:var(--header-primary);font-family:var(--font-primary);";
 
-        const theme = THEMES[name];
-        if (!theme) return;
+    const title = document.createElement("h2");
+    title.textContent = "Theme";
+    title.style.cssText = "font-size:20px;font-weight:700;";
+    panel.appendChild(title);
 
-        const body = document.body;
-        this._classOps = [];
+    const subtitle = document.createElement("p");
+    subtitle.textContent = "Select your preference";
+    subtitle.style.cssText =
+      "margin:0 0 16px;color:var(--header-secondary);font-size:14px;";
+    panel.appendChild(subtitle);
 
-        // Ensure the correct light/dark base class is present
-        const needed   = `theme-${theme.base}`;
-        const opposite = theme.base === "dark" ? "theme-light" : "theme-dark";
+    const note = document.createElement("p");
+    note.innerHTML =
+      "<strong>Tip:</strong> Light themes temporarily switch Discord to light mode. Click the active theme again to deactivate it and restore your original mode.";
+    note.style.cssText =
+      "margin-top:16px;padding:10px 12px;background:var(--background-secondary);border-radius:4px;font-size:13px;color:var(--header-secondary);";
+    panel.appendChild(note);
 
-        if (!body.classList.contains(needed)) {
-            if (body.classList.contains(opposite)) {
-                // Swap dark light
-                body.classList.remove(opposite);
-                body.classList.add(needed);
-                this._classOps.push({ remove: needed, restore: opposite });
-            } else {
-                body.classList.add(needed);
-                this._classOps.push({ remove: needed, restore: null });
-            }
-        }
+    return panel;
+  }
 
-        if (!body.classList.contains("custom-theme-background")) {
-            body.classList.add("custom-theme-background");
-            this._classOps.push({ remove: "custom-theme-background", restore: null });
-        }
-
-        BdApi.DOM.addStyle(CSS_ID, theme.css);
-        this._activeTheme = name;
-    }
-
-    _removeTheme() {
-        // Remove injected CSS
-        BdApi.DOM.removeStyle(CSS_ID);
-
-        const body = document.body;
-        for (const op of [...this._classOps].reverse()) {
-            body.classList.remove(op.remove);
-            if (op.restore) body.classList.add(op.restore);
-        }
-
-        this._classOps = [];
-        this._activeTheme = null;
-    }
-
-
-    getSettingsPanel() {
-        const panel = document.createElement("div");
-        panel.style.cssText = "padding:16px;color:var(--header-primary);font-family:var(--font-primary);";
-
-        const title = document.createElement("h2");
-        title.textContent = "Free Discord Themes";
-        title.style.cssText = "margin:0 0 4px;font-size:20px;font-weight:700;";
-        panel.appendChild(title);
-
-        const subtitle = document.createElement("p");
-        subtitle.textContent = "All 21 Discord Nitro gradient themes. Select one to apply it instantly.";
-        subtitle.style.cssText = "margin:0 0 16px;color:var(--header-secondary);font-size:14px;";
-        panel.appendChild(subtitle);
-
-        const addSection = (label) => {
-            const h = document.createElement("h3");
-            h.textContent = label;
-            h.style.cssText = "margin:12px 0 8px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--channels-default);";
-            panel.appendChild(h);
-        };
-
-        const addGrid = (names) => {
-            const grid = document.createElement("div");
-            grid.style.cssText = "display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:8px;margin-bottom:8px;";
-            names.forEach(name => {
-                const btn = document.createElement("button");
-                btn.textContent = name;
-                btn.dataset.theme = name;
-                this._styleBtn(btn, name === this._activeTheme);
-                btn.onmouseenter = () => { if (btn.dataset.theme !== this._activeTheme) { btn.style.borderColor = "var(--brand-experiment)"; btn.style.color = "var(--interactive-hover)"; } };
-                btn.onmouseleave = () => { if (btn.dataset.theme !== this._activeTheme) this._styleBtn(btn, false); };
-                btn.onclick = () => {
-                    const chosen = btn.dataset.theme;
-                    if (this._activeTheme === chosen) {
-                        this._removeTheme();
-                        BdApi.Data.save(PLUGIN_NAME, "theme", null);
-                    } else {
-                        this._applyTheme(chosen);
-                        BdApi.Data.save(PLUGIN_NAME, "theme", chosen);
-                    }
-                    // Refresh all buttons
-                    panel.querySelectorAll("button[data-theme]").forEach(b => {
-                        this._styleBtn(b, b.dataset.theme === this._activeTheme);
-                    });
-                };
-                grid.appendChild(btn);
-            });
-            panel.appendChild(grid);
-        };
-
-        const dark  = Object.keys(THEMES).filter(n => THEMES[n].base === "dark");
-        const light = Object.keys(THEMES).filter(n => THEMES[n].base === "light");
-
-        addSection(`🌙 Dark Themes (${dark.length})`);
-        addGrid(dark);
-        addSection(`☀️ Light Themes (${light.length})`);
-        addGrid(light);
-
-        const note = document.createElement("p");
-        note.innerHTML = "💡 <strong>Tip:</strong> Light themes temporarily switch Discord to light mode. Click the active theme again to deactivate it and restore your original mode.";
-        note.style.cssText = "margin-top:16px;padding:10px 12px;background:var(--background-secondary);border-radius:4px;font-size:13px;color:var(--header-secondary);";
-        panel.appendChild(note);
-
-        return panel;
-    }
-
-    _styleBtn(btn, active) {
+  _styleBtn(btn, active) {
     btn.textContent = (active ? "✓ " : "") + btn.dataset.theme;
     btn.style.cssText = `
         padding: 8px 12px;
@@ -1155,5 +1234,5 @@ module.exports = class FreeDiscordThemes {
         transition: border-color .15s, background .15s;
         width: 100%;
     `;
-}
+  }
 };
