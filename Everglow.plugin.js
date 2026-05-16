@@ -61,28 +61,46 @@ const THEMES = {
     --bg-overlay-home-card: linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home-card)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-home-card))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
     --bg-overlay-app-frame: linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-app-frame)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-app-frame))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
 }` },
-    'Candyfloss': { base: "light", css: `.theme-light.custom-theme-background {
-    --bg-overlay-color: 255 255 255;
-    --bg-overlay-color-inverse: 0 0 0;
-    --bg-overlay-opacity-1: 0.9;
+    'BlurpleTwilight'
+    'Candyfloss': { base: "dark", css: `
+.theme-dark.custom-theme-background {
+    --bg-overlay-color: 0 0 0;
+    --bg-overlay-color-inverse: 255 255 255;
+    --bg-overlay-opacity-1: 0.85;
     --bg-overlay-opacity-2: 0.8;
     --bg-overlay-opacity-3: 0.7;
-    --bg-overlay-opacity-4: 0.6;
-    --bg-overlay-opacity-5: 0.3;
-    --bg-overlay-opacity-6: 0.15;
-    --bg-overlay-opacity-hover: 0.7;
-    --bg-overlay-opacity-hover-inverse: 0.02;
-    --bg-overlay-opacity-active: 0.65;
-    --bg-overlay-opacity-active-inverse: 0.03;
-    --bg-overlay-opacity-selected: 0.6;
-    --bg-overlay-opacity-selected-inverse: 0.04;
-    --bg-overlay-opacity-chat: 0.9;
-    --bg-overlay-opacity-home: 0.7;
-    --bg-overlay-opacity-home-card: 0.9;
-    --bg-overlay-opacity-app-frame: var(--bg-overlay-opacity-5);
+    --bg-overlay-opacity-4: 0.5;
+    --bg-overlay-opacity-5: 0.4;
+    --bg-overlay-opacity-6: 0.1;
+    --bg-overlay-opacity-hover: 0.5;
+    --bg-overlay-opacity-hover-inverse: 0.08;
+    --bg-overlay-opacity-active: 0.45;
+    --bg-overlay-opacity-active-inverse: 0.1;
+    --bg-overlay-opacity-selected: 0.4;
+    --bg-overlay-opacity-selected-inverse: 0.15;
+    --bg-overlay-opacity-chat: 0.8;
+    --bg-overlay-opacity-home: 0.85;
+    --bg-overlay-opacity-home-card: 0.8;
+    --bg-overlay-opacity-app-frame: var(--bg-overlay-opacity-4);
 }
+.theme-dark.custom-theme-background {
+    --__spoiler-background-color--hidden: var(--primary-630);
+    --__spoiler-background-color--hidden--hover: hsl(var(--primary-630-hsl)/0.8);
+}
+.theme-dark, .theme-dark.custom-theme-background {
+    --__spoiler-background-color--hidden: var(--primary-700);
+    --__spoiler-background-color--hidden--hover: hsl(var(--primary-700-hsl)/0.8);
+    --__spoiler-background-color--revealed: hsl(var(--white-500-hsl)/0.1);
+    --__spoiler-text-color--hidden: transparent;
+    --__spoiler-warning-text-color: var(--primary-200);
+    --__spoiler-warning-text-color--hover: var(--white-500);
+    --__spoiler-warning-background-color: hsl(var(--black-500-hsl)/0.6);
+    --__spoiler-warning-background-color--hover: hsl(var(--black-500-hsl)/0.9);
+    --__spoiler-container-box-shadow-color: hsl(var(--black-500-hsl)/0.1);
+}
+
 .custom-theme-background {
-    --custom-theme-background: linear-gradient(180.14deg, var(--bg-gradient-cotton-candy-1) 8.5%, var(--bg-gradient-cotton-candy-2) 94.28%);
+    --custom-theme-background: linear-gradient(47.61deg, var(--bg-gradient-blurple-twilight-1) 11.18%, var(--bg-gradient-blurple-twilight-2) 64.54%);
 }
 .custom-theme-background {
     --bg-overlay-1: linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-1)),rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-1))) fixed 0 0/cover,var(--custom-theme-background) fixed 0 0/cover;
