@@ -1,7 +1,7 @@
 /**
  * @name Everglow
  * @version 1.2.0
- * @author ashley.everly (Credits to EricPanDev)
+ * @author ashley.everly (Themes by EricPanDev)
  * @description Nitro-inspired gradient background themes for Discord. Pick any theme from the settings panel.
  * @source https://github.com/ashleyeverly/Everglow
  * @authorLink https://github.com/ashleyeverly
