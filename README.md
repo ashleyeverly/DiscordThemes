@@ -1,4 +1,4 @@
-# Themes
+# Everglow
 
 Free Nitro-inspired Discord themes for BetterDiscord.
 
