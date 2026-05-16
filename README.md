@@ -1,4 +1,4 @@
-# Nitro Themes
+# Themes
 
 Free Nitro-inspired Discord themes for BetterDiscord.
 
